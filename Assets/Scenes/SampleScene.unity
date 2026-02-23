@@ -823,7 +823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da49e1c017ff97644813fdacfca46bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _alarmDevice: {fileID: 723490493}
 --- !u!65 &573828771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -845,6 +844,52 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &611852270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611852271}
+  - component: {fileID: 611852272}
+  m_Layer: 0
+  m_Name: AlarmDoorController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &611852271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611852270}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.35, y: 0, z: -4.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1989924567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &611852272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611852270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9696cf3a5eb3e1045bae3164bd599028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _alarmZone: {fileID: 1863710511}
+  _alarmDevice: {fileID: 1201433385}
 --- !u!1 &625398576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1172,7 @@ MonoBehaviour:
   _volumeChangeSpeed: 1
   _renderer: {fileID: 0}
   _idleColor: {r: 0, g: 1, b: 0, a: 1}
-  _allertColor: {r: 1, g: 0, b: 0, a: 1}
+  _alertColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!82 &723490494
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1575,7 +1620,7 @@ MonoBehaviour:
   _volumeChangeSpeed: 1
   _renderer: {fileID: 0}
   _idleColor: {r: 0, g: 1, b: 0, a: 1}
-  _allertColor: {r: 1, g: 0, b: 0, a: 1}
+  _alertColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!82 &1201433386
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1795,7 +1840,7 @@ MonoBehaviour:
   _volumeChangeSpeed: 1
   _renderer: {fileID: 0}
   _idleColor: {r: 0, g: 1, b: 0, a: 1}
-  _allertColor: {r: 1, g: 0, b: 0, a: 1}
+  _alertColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!82 &1237816872
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1963,6 +2008,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237816869}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1238466678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1238466679}
+  - component: {fileID: 1238466680}
+  m_Layer: 0
+  m_Name: AlarmHallController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1238466679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238466678}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.21, y: 0, z: 0.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1989924567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1238466680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238466678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9696cf3a5eb3e1045bae3164bd599028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _alarmZone: {fileID: 1934737137}
+  _alarmDevice: {fileID: 1237816871}
 --- !u!1 &1391350407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,7 +2064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1391350408}
   m_Layer: 0
-  m_Name: AllarmZone
+  m_Name: AlarmZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2050,7 +2141,7 @@ MonoBehaviour:
   _volumeChangeSpeed: 1
   _renderer: {fileID: 0}
   _idleColor: {r: 0, g: 1, b: 0, a: 1}
-  _allertColor: {r: 1, g: 0, b: 0, a: 1}
+  _alertColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!82 &1396452233
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2263,7 +2354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da49e1c017ff97644813fdacfca46bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _alarmDevice: {fileID: 1396452232}
 --- !u!65 &1462772352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2458,6 +2548,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677565417}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1805067467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1805067468}
+  - component: {fileID: 1805067469}
+  m_Layer: 0
+  m_Name: AlarmKitchenController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1805067468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805067467}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.66, y: 0, z: 2.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1989924567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1805067469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805067467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9696cf3a5eb3e1045bae3164bd599028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _alarmZone: {fileID: 573828770}
+  _alarmDevice: {fileID: 723490493}
 --- !u!1 &1863710507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,7 +2604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1863710508}
   - component: {fileID: 1863710510}
-  - component: {fileID: 1863710509}
+  - component: {fileID: 1863710511}
   m_Layer: 0
   m_Name: DoorZone
   m_TagString: Untagged
@@ -2491,19 +2627,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1391350408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1863710509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863710507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da49e1c017ff97644813fdacfca46bd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _alarmDevice: {fileID: 1201433385}
 --- !u!65 &1863710510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2525,6 +2648,64 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1863710511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863710507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da49e1c017ff97644813fdacfca46bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1873871145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1873871146}
+  - component: {fileID: 1873871147}
+  m_Layer: 0
+  m_Name: AlarmLivingRoomController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1873871146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873871145}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6, y: 0, z: 1.14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1989924567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1873871147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873871145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9696cf3a5eb3e1045bae3164bd599028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _alarmZone: {fileID: 1462772351}
+  _alarmDevice: {fileID: 1396452232}
 --- !u!1 &1876130054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,7 +2782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da49e1c017ff97644813fdacfca46bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _alarmDevice: {fileID: 1237816871}
 --- !u!65 &1934737138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2686,6 +2866,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 35766174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1989924566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1989924567}
+  m_Layer: 0
+  m_Name: AlarmController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1989924567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989924566}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 611852271}
+  - {fileID: 1238466679}
+  - {fileID: 1873871146}
+  - {fileID: 1805067468}
+  m_Father: {fileID: 2086777793}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2004012906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2750,8 +2965,9 @@ Transform:
   - {fileID: 1465924306}
   - {fileID: 345323404}
   - {fileID: 35766174}
-  - {fileID: 1391350408}
+  - {fileID: 1989924567}
   - {fileID: 283215650}
+  - {fileID: 1391350408}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
