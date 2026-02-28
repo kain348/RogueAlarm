@@ -4,7 +4,6 @@ using UnityEngine;
 [AddComponentMenu("Game/Movement/Thief Patroller")]
 public class ThiefPatroller : MonoBehaviour
 {
-    private const int IndexZero = 0;
     private const float ReachedPointSqrDistance = 0.1f;
 
     [Header("Movement Settings")]
@@ -14,8 +13,8 @@ public class ThiefPatroller : MonoBehaviour
     [SerializeField] private Transform _waypointsRoot;
 
     private Transform[] _waypoints;
-    private int _currentIndex;
     private Rigidbody _rigidbody;
+    private int _currentIndex;
 
     private void Awake()
     {
@@ -34,7 +33,7 @@ public class ThiefPatroller : MonoBehaviour
 
         int count = _waypointsRoot.childCount;
 
-        if (count == IndexZero)
+        if (count == 0)
         {
             Debug.LogError($"{nameof(ThiefPatroller)} on {name}: waypoints root has no children.", this);
             enabled = false;
@@ -44,7 +43,7 @@ public class ThiefPatroller : MonoBehaviour
 
         _waypoints = new Transform[count];
 
-        for (int i = IndexZero; i < count; i++)
+        for (int i = 0; i < count; i++)
         {
             _waypoints[i] = _waypointsRoot.GetChild(i);
         }
@@ -52,7 +51,7 @@ public class ThiefPatroller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_waypoints == null || _waypoints.Length == IndexZero)
+        if (_waypoints == null || _waypoints.Length == 0)
             return;
 
         Transform targetPoint = _waypoints[_currentIndex];
@@ -68,7 +67,7 @@ public class ThiefPatroller : MonoBehaviour
             MoveToNextPoint();
 
         Vector3 moveDir = targetPoint.position - transform.position;
-        moveDir.y = IndexZero;
+        moveDir.y = 0;
 
         if (moveDir != Vector3.zero)
             transform.rotation = Quaternion.LookRotation(moveDir);
@@ -79,6 +78,6 @@ public class ThiefPatroller : MonoBehaviour
         _currentIndex++;
 
         if (_currentIndex >= _waypoints.Length)
-            _currentIndex = IndexZero;
+            _currentIndex = 0;
     }
 }
